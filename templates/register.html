@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Code Circle - Register</title>
+    <!-- Include any CSS styles you need -->
+    <link rel="stylesheet" type="text/css" href="../static/register.css">
+</head>
+<body>
+    <div class="container-left">
+        <div class="logo">
+            <img id="logo" src="../static/logo/code_logo.png" alt="Code Circle">
+        </div>
+    </div>
+    <div class="container">
+        <h1>Create an Account</h1>
+        <form method="POST" action="/register" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Enter your First Name" required>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Enter your Last Name" required>
+            </div>
+                <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email (Gmail)</label>
+                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+</body>
+</html>

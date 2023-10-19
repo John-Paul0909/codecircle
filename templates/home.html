@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCircle</title> 
+    <link rel="stylesheet" href="../static/dashboard.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="icon" type="image/x-icon" href="logo/codecircle_logo.png">
+
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h2 class="log">
+                C o d e C i r c l e
+            </h2>
+            <div class="search-bar">
+                <i class="uil uil-search"></i>
+                <input type="search" placeholder="Search for Users">
+            </div>
+                <div class="profile-picture">
+                    <img src="assets/palette1.png">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-------Main-------->
+
+    <main>
+        <div class="container">
+            <!-------Left-------->
+            <div class="left">
+                <a class="profile" href="profile.html">
+                    <div class="profile-picture">
+                        <img src="assets/palette1.png">
+                    </div>
+                    <div class="handle">
+                     <h4>{{account.firstname}} {{account.lastname}}</h4>
+                        <p class="text-muted">
+                            Student Developer
+                        </p>
+                    </div>
+                </a>
+                <!-------Sidebar-------->
+                <div class="sidebar">
+                    <a class="menu-item" href="dashboard.html">
+                        <span><i class="uil uil-brackets-curly"></i></span>
+                        <h3>CodeFeed</h3>
+                    </a>
+                    <a class="menu-item" href="messages.html">
+                        <span><i class="uil uil-chat"></i></span>
+                        <h3>Messages</h3>
+                    </a>
+                    <a class="menu-item" href="notification.html">
+                        <span><i class="uil uil-bell"></i></span>
+                        <h3>Notifications</h3>
+                    </a>
+                    <a class="menu-item" href="circle.html">
+                        <span><i class="uil uil-users-alt"></i></span>
+                        <h3>Circle</h3>
+                    </a>
+
+                    <a class="menu-item" href="about.html">
+                        <span><i class="uil uil-info-circle"></i></span>
+                        <h3>About Us</h3>
+                    </a>
+                    <div class="btn-field">
+                        <form action="/logout" method="get">
+                            <button type="submit" id="logoutBtn">Logout</button>
+                        </form>
+                    </div>
+
+                </div>
+               
+            </div>
+             <!---------End of Left--------->
+
+
+            <!---------Create Post--------->
+            <div class="middle">
+                <form class="create-post" onsubmit="addPost(); return false;">
+                    <div class="profile-picture">
+                        <img src="assets/palette1.png">
+                    </div>
+                    <input type="text" placeholder="What source-code do you post, User?" id="post-text">
+                    <input type="submit" value="Post" class="btn btn-dark" id="post-button">
+                </form>
+
+            
+            <!---------End of Create Post--------->
+
+            <!---------Feeds--------->
+             <div class="feeds">
+                <div class="feed">
+                    <div class="head">
+                        <div class="user">
+                            <div class="profile-picture">
+                                <img src="assets/palette3.png" alt="Profile Picture">
+                            </div>
+                            <div class="info">
+                                <div class="user-info">
+                                    <h3>{{account.firstname}} {{account.lastname}}</h3>
+                                    <small>Yesterday at 11:59 PM</small>
+                                </div>
+                                <p>Hello Everyone! How to start programming?</p>
+                            </div>
+                        </div>
+                        <div class="post-bottom">
+                            <div class="action">
+                                <i class="uil uil-thumbs-up"></i>
+                                <span>Like</span>
+                            </div>
+                            <div class="action">
+                                <i class="uil uil-comment-dots"></i>
+                                <span>Comment</span>
+                            </div>
+                            <div class="action">
+                                <span><i class="uil uil-bookmark"></i></span>
+                                <span>Save</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news-container">
+                <div class="news-item" id="post-container-0">
+                    <!-- try dito -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+            <!---------end of feeds--------->
+
+            <script src="./dashboard.js"></script>
+            <script src="./postscript.js"></script>
+            
+</script>
+</body>
+</html>
+
